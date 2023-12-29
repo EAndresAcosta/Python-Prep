@@ -6,17 +6,24 @@
 # 1) Con la clase creada en el módulo 7, tener en cuenta diferentes casos en que el código pudiera arrojar error. Por ejemplo, en la creación del objeto recibimos una lista de números enteros pero ¿qué pasa si se envía otro tipo de dato?
 
 # In[1]:
+import sys
+sys.path.append(r'C:/Users/andre\Desktop/Python-Prep/M08_clasesyOOP/herramientas.py')
 
+import herramientas as h
 
-
+h1 = h.Herramientas('Andres')
 
 # 2) En la función que hace la conversión de grados, validar que los parámetros enviados sean los esperados, de no serlo, informar cuáles son los valores esperados.
 
 # In[5]:
+import importlib
+importlib.reload(h)
 
+h1 = h.Herramientas([2,3,4,5])
 
+h1.conversion_grados(1,2)
 
-
+h1.conversion_grados('celsius', 'farenheit')
 
 # 3) Importar el modulo "unittest" y crear los siguientes casos de pruebas sobre la clase utilizada en el punto 2<br>
 # Creacion del objeto incorrecta<br>
